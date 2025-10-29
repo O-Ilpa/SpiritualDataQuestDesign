@@ -154,7 +154,7 @@ const PlanetView = () => {
         {/* Content Tabs */}
         <Tabs defaultValue="planets" className="space-y-8">
           <TabsList className="bg-card/50 backdrop-blur-sm border border-primary/30">
-            <TabsTrigger value="planets">Galaxys</TabsTrigger>
+            <TabsTrigger value="planets">Planets</TabsTrigger>
             <TabsTrigger value="missions">Collective Missions</TabsTrigger>
             <TabsTrigger value="members">Community</TabsTrigger>
             <TabsTrigger value="events">Events</TabsTrigger>
