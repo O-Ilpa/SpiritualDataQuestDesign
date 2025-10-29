@@ -29,7 +29,7 @@ export const GalaxyCard = ({
 
   return (
     <Card 
-      onClick={() => navigate(`/planet/${planetId}`)}
+      onClick={() => navigate(`/galaxy/${planetId}`)}
       className="group relative overflow-hidden border-primary/30 bg-card/50 backdrop-blur-sm hover:border-primary/60 transition-all duration-500 hover:shadow-[0_0_40px_rgba(168,85,247,0.4)] cursor-pointer animate-fade-in"
     >
       <div className="absolute inset-0 bg-linear-to-br from-primary/20 via-transparent to-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

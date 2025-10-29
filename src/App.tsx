@@ -17,7 +17,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<GalaxyMap />} />
-          <Route path="/planet/:id" element={<PlanetView />} />
+          <Route path="/galaxy/:id" element={<PlanetView />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

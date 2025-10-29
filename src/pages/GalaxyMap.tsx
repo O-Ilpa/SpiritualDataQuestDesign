@@ -119,28 +119,19 @@ const GalaxyMap = () => {
             Ready to Begin Your Journey?
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Join a planetary community or create your own. Every explorer starts with their first quest.
+            Join a Galaxy. Every explorer starts with their first quest.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button 
               size="lg" 
               className="bg-primary hover:bg-primary/90 shadow-[0_0_30px_rgba(168,85,247,0.4)]"
               onClick={() => {
-                setSelectedPlanet("Meditation Galaxy");
-                setJoinDialogOpen(true);
+                window.scrollTo({top: 500, behavior: "smooth"
+                })
               }}
             >
               <Users className="w-5 h-5 mr-2" />
               Join a Galaxy
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-accent/50 hover:border-accent"
-              onClick={() => setCreateDialogOpen(true)}
-            >
-              <Plus className="w-5 h-5 mr-2" />
-              Create Galaxy
             </Button>
           </div>
         </div>
