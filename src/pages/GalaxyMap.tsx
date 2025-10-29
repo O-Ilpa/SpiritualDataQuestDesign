@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { StarField } from "@/components/StarField";
-import { PlanetCard } from "@/components/PlanetCard";
+import { GalaxyCard } from "@/components/GalaxyCard";
 import { JoinPlanetDialog } from "@/components/JoinPlanetDialog";
 import { CreatePlanetDialog } from "@/components/CreatePlanetDialog";
 import { Button } from "@/components/ui/button";
@@ -11,10 +11,10 @@ import planetReiki from "@/assets/planet-reiki.png";
 import planetAnxiety from "@/assets/planet-anxiety.png";
 import planetTarot from "@/assets/planet-tarot.png";
 
-const planets = [
+const Galaxies = [
   {
     id: "meditation",
-    name: "Meditation Planet",
+    name: "Meditation Galaxy",
     image: planetZen,
     description: "A sanctuary for mindfulness practitioners exploring inner peace through meditation and contemplation",
     memberCount: 1247,
@@ -24,7 +24,7 @@ const planets = [
   },
   {
     id: "energy-healing",
-    name: "Energy Healing Planet",
+    name: "Energy Healing Galaxy",
     image: planetReiki,
     description: "Energy healers united in mastering Reiki techniques and sharing universal life force knowledge",
     memberCount: 892,
@@ -34,7 +34,7 @@ const planets = [
   },
   {
     id: "mental-health",
-    name: "Mental Health Planet",
+    name: "Mental Health Galaxy",
     image: planetAnxiety,
     description: "A compassionate community supporting each other through anxiety relief practices and coping strategies",
     memberCount: 2156,
@@ -44,7 +44,7 @@ const planets = [
   },
   {
     id: "divination",
-    name: "Divination Planet",
+    name: "Divination Galaxy",
     image: planetTarot,
     description: "Seekers and readers diving deep into tarot wisdom, symbolism, and divination practices",
     memberCount: 634,
@@ -67,7 +67,7 @@ const GalaxyMap = () => {
         <div className="text-center space-y-6 mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 backdrop-blur-sm mb-4">
             <Sparkles className="w-4 h-4 text-primary animate-pulse" />
-            <span className="text-sm text-primary font-medium">Quest PlanetsCircle</span>
+            <span className="text-sm text-primary font-medium">Quest Galaxies</span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent animate-float">
@@ -75,14 +75,14 @@ const GalaxyMap = () => {
           </h1>
           
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Join communities as planets in a vast universe of shared growth. Each planet represents a journey of collective achievement.
+            Join communities as Galaxies in a vast universe of shared growth. Each planet represents a journey of collective achievement.
           </p>
 
           {/* Stats */}
           <div className="flex flex-wrap justify-center gap-8 mt-8">
             <div className="text-center">
               <div className="text-3xl font-bold text-primary">12</div>
-              <div className="text-sm text-muted-foreground">Active Planets</div>
+              <div className="text-sm text-muted-foreground">Active Galaxies</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-accent">5.2K</div>
@@ -108,8 +108,8 @@ const GalaxyMap = () => {
 
         {/* Planets Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12">
-          {planets.map((planet) => (
-            <PlanetCard key={planet.name} planetId={planet.id} {...planet} />
+          {Galaxies.map((planet) => (
+            <GalaxyCard key={planet.name} planetId={planet.id} {...planet} />
           ))}
         </div>
 
@@ -126,12 +126,12 @@ const GalaxyMap = () => {
               size="lg" 
               className="bg-primary hover:bg-primary/90 shadow-[0_0_30px_rgba(168,85,247,0.4)]"
               onClick={() => {
-                setSelectedPlanet("Meditation Planet");
+                setSelectedPlanet("Meditation Galaxy");
                 setJoinDialogOpen(true);
               }}
             >
               <Users className="w-5 h-5 mr-2" />
-              Join a Planet
+              Join a Galaxy
             </Button>
             <Button 
               size="lg" 
@@ -140,7 +140,7 @@ const GalaxyMap = () => {
               onClick={() => setCreateDialogOpen(true)}
             >
               <Plus className="w-5 h-5 mr-2" />
-              Create Planet
+              Create Galaxy
             </Button>
           </div>
         </div>

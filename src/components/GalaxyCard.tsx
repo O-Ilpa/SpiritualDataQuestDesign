@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Users, Target, TrendingUp } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
-interface PlanetCardProps {
+interface GalaxyCardProps {
   name: string;
   image: string;
   description: string;
@@ -15,7 +15,7 @@ interface PlanetCardProps {
   planetId: string;
 }
 
-export const PlanetCard = ({
+export const GalaxyCard = ({
   name,
   image,
   description,
@@ -24,7 +24,7 @@ export const PlanetCard = ({
   level,
   category,
   planetId,
-}: PlanetCardProps) => {
+}: GalaxyCardProps) => {
   const navigate = useNavigate();
 
   return (
@@ -32,7 +32,7 @@ export const PlanetCard = ({
       onClick={() => navigate(`/planet/${planetId}`)}
       className="group relative overflow-hidden border-primary/30 bg-card/50 backdrop-blur-sm hover:border-primary/60 transition-all duration-500 hover:shadow-[0_0_40px_rgba(168,85,247,0.4)] cursor-pointer animate-fade-in"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div className="absolute inset-0 bg-linear-to-br from-primary/20 via-transparent to-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       
       <div className="relative aspect-video overflow-hidden">
         <img
@@ -40,7 +40,7 @@ export const PlanetCard = ({
           alt={name}
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-card via-card/50 to-transparent" />
         
         <Badge className="absolute top-4 right-4 bg-primary/90 backdrop-blur-sm">
           Level {level}

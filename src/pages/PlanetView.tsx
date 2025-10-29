@@ -94,7 +94,7 @@ const PlanetView = () => {
                 Meditation
               </Badge>
               <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Meditation Planet
+                Meditation Galaxy
               </h1>
               <p className="text-lg text-muted-foreground">
                 A sanctuary for mindfulness practitioners exploring inner peace through meditation and contemplation. Together, we journey towards collective enlightenment.
@@ -121,7 +121,7 @@ const PlanetView = () => {
 
             <div className="space-y-3">
               <div className="flex justify-between text-sm">
-                <span className="text-muted-foreground">Planet Evolution Progress</span>
+                <span className="text-muted-foreground">Galaxy Evolution Progress</span>
                 <span className="text-primary font-semibold">67% to Level 6</span>
               </div>
               <Progress value={67} className="h-3" />
@@ -137,7 +137,7 @@ const PlanetView = () => {
                 className="flex-1 bg-primary hover:bg-primary/90 shadow-[0_0_30px_rgba(168,85,247,0.4)]"
                 onClick={() => setJoinDialogOpen(true)}
               >
-                Join Planet
+                Join Galaxy
               </Button>
               <Button 
                 size="lg" 
@@ -152,22 +152,22 @@ const PlanetView = () => {
         </div>
 
         {/* Content Tabs */}
-        <Tabs defaultValue="towns" className="space-y-8">
+        <Tabs defaultValue="planets" className="space-y-8">
           <TabsList className="bg-card/50 backdrop-blur-sm border border-primary/30">
-            <TabsTrigger value="towns">Towns</TabsTrigger>
+            <TabsTrigger value="planets">Galaxys</TabsTrigger>
             <TabsTrigger value="missions">Collective Missions</TabsTrigger>
             <TabsTrigger value="members">Community</TabsTrigger>
             <TabsTrigger value="events">Events</TabsTrigger>
           </TabsList>
 
-          <TabsContent value="towns" className="space-y-6">
+          <TabsContent value="planets" className="space-y-6">
             <div className="mb-4">
               <h3 className="text-xl font-semibold mb-2 flex items-center gap-2">
                 <Sparkles className="w-5 h-5 text-accent" />
-                Towns & Communities
+                Planets & Communities
               </h3>
               <p className="text-muted-foreground text-sm">
-                Towns evolve as members complete quests: Homestead → Settlement → Village → Town → City → Metropolis
+                Planets evolve as members complete quests: Homestead → Settlement → Village → Town → City → Metropolis
               </p>
             </div>
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
