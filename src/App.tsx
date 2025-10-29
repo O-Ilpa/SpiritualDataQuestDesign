@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import GalaxyMap from "./pages/GalaxyMap";
 import PlanetView from "./pages/PlanetView";
 import NotFound from "./pages/NotFound";
+import UnderDev from "./pages/UnderDev";
 
 const queryClient = new QueryClient();
 
@@ -16,7 +17,8 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<GalaxyMap />} />
+          <Route path="/" element={<UnderDev/>} />
+          <Route path="/galaxies" element={<GalaxyMap />} />
           <Route path="/galaxy/:id" element={<PlanetView />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
